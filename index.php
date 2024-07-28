@@ -1,7 +1,6 @@
 <?php 
 include_once 'libs/load.php';
 ?>
-<!DOCTYPE html>
 <?php load_templates("_head"); ?>
 <body>
     <?php load_templates("_header"); ?>
