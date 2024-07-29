@@ -13,7 +13,6 @@ $conn = Database::getConnection();
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully\n";
 
 $query = "SELECT * FROM `search` WHERE `name` = 'Apple' ";
 $result =$conn->query($query);

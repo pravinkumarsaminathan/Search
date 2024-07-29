@@ -19,3 +19,24 @@ function get_config($key, $default = NULL)
 
 }
 
+function result()
+{
+    $conn = Database::getConnection();
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+    $name = ucfirst($_GET['search']);
+    $query = "SELECT * FROM `search` WHERE `name` = '$name' ";
+    $result =$conn->query($query);
+
+    if ($result->num_rows > 0)
+    {
+        $row = $result->fetch_assoc();
+        return $row;
+    }
+    else
+    {
+        return NULL;
+    }
+}
+
