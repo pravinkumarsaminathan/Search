@@ -8,23 +8,29 @@ include_once "libs/load.php";
 // // Create connection
 // $conn = new mysqli($servername, $username, $password);
 
-// // Check connection
-$conn = Database::getConnection();
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+// Check connection
+// $conn = Database::getConnection();
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
 
-$query = "SELECT * FROM `search` WHERE `name` = 'Apple' ";
-$result =$conn->query($query);
+// $name = ucfirst($_POST['search']);
+// $query = "SELECT * FROM `search` WHERE `name` = '$_POST[search]' ";
+// $a = "touch a.txt";
+// system($a);
+// $result =$conn->query($query);
+// if ($result->num_rows > 0)
+// {
+//     $row = $result->fetch_assoc();
+//     print_r($row);
+// }
+// else
+// {
+//     print("error");
+// }
+// $name = ucfirst($_GET['search']);
+// $query = "SELECT * FROM `search` WHERE `name` = '$name' ";
+// print($query);
 
-if ($result->num_rows > 0)
-{
-    $row = $result->fetch_assoc();
-    print_r($row);
-}
-else
-{
-    print("error");
-}
-
+print_r($_SERVER); 
 ?>

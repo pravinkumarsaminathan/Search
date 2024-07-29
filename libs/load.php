@@ -8,6 +8,9 @@ function load_templates($name)
 global $__site_config;
 $__site_config = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/../mysql_server.json');
 
+global $__sublink;
+$__sublink = $_SERVER['HTTP_HOST'];
+
 function get_config($key, $default = NULL)
 {
     global $__site_config;
@@ -30,7 +33,7 @@ function result()
     $result =$conn->query($query);
 
     if ($result->num_rows > 0)
-    {
+    {    
         $row = $result->fetch_assoc();
         return $row;
     }
