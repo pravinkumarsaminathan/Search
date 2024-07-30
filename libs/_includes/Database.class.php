@@ -29,4 +29,9 @@ class Database
             return Database::$conn;
         }
     }
+
+    public function __destruct()
+    {
+        $conn->close();
+    }
 }
