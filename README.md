@@ -133,3 +133,7 @@ use:`' OR (backtick here)id(backtick here)='13' -- `
 This input will fetch exactly the item with id '13' on the table.
 
 Example : https://fruits.selfmade.solutions/result.php?search=%27+OR+%60id%60%3D%2713%27+--++
+
+## SQL Injection Prevention
+
+To protect your application from SQL injection vulnerabilities, always sanitize and validate a user inputs.
