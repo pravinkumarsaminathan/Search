@@ -128,4 +128,6 @@ https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20GROUP
 
 ### To find additional informations
 
-use:`' OR ``id``='3' -- `
+use:`' OR (backtick here)id(backtick here)='13' -- `
+
+This input will fetch exactly the item with id '13' on the table.
