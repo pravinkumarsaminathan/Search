@@ -33,7 +33,7 @@ You may need to find the number of columns in the original query. This can be do
 Continue increasing the number until you get an error, which will indicate the number of columns.
 
 Inject the Union-Based Payload:
-Once you know the number of columns, use the UNION injection.
+Once you know the number of columns, use the UNION injection. Because this website's sql query doesn't support mulitple commands in single line.
 
 Knowing that the search table has 12 columns, you need to adjust your UNION SELECT statement to match this structure. Here's how you can do it:
 
