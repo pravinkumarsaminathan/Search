@@ -131,3 +131,5 @@ https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20GROUP
 use:`' OR (backtick here)id(backtick here)='13' -- `
 
 This input will fetch exactly the item with id '13' on the table.
+
+Example : https://fruits.selfmade.solutions/result.php?search=%27+OR+%60id%60%3D%2713%27+--++
