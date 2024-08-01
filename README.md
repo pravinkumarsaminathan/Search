@@ -1,4 +1,4 @@
-# Website Link : https://fruits.selfmade.ninja
+# Website Link : https://fruits.selfmade.solutions
 
 This website is Vulnerabile in sql injection. Here we see how sql injection happen in real world using this website.
 
